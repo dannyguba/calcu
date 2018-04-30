@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "!">
+<head>
+  <meta charset="utf-8">
+  <title> CalculadorA </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(51, 129, 153);
+    }
+
+  </style>
+</head>
+
+<body>
+  <form>
+    <p>
+      Valor A:
+      <input id="datoA" size="3">
+    </p>
+    <p>
+      Valor B:
+      <input id="datoB" size="3">
+    </p>
+      <input type="button" onClick="suma()" value="+">
+      <input type="button" onClick="resta()" value="-">
+      <input type="button" onClick="division()" value="/">
+      <input type="button" onClick="multiplicacion()" value="*">
+  
+    <p>
+      Solución: 
+      <p id="solución" value="0"></p>
+    </p>
+  </form>
+    
+  <script>
+    function suma(){
+      var a = parseFloat(document.getElementById("datoA").value);
+      var b = parseFloat(document.getElementById("datoB").value);
+      
+      document.getElementById("solución").innerHTML = a + b;
+    }
+    function resta(){
+      var a = parseFloat(document.getElementById("datoA").value);
+      var b = parseFloat(document.getElementById("datoB").value);
+      
+      document.getElementById("solución").innerHTML = a - b;
+    }
+    function division(){
+      var a = parseFloat(document.getElementById("datoA").value);
+      var b = parseFloat(document.getElementById("datoB").value);
+      
+      document.getElementById("solución").innerHTML = a / b;
+    }
+
+    function multiplicacion(){
+      var a = parseFloat(document.getElementById("datoA").value);
+      var b = parseFloat(document.getElementById("datoB").value);
+      
+      document.getElementById("solución").innerHTML = a * b;
+    }
+  
+  </script>
+  <script src="js/script.js"></script>
+
+
+  
+</body>
+</html>
+
